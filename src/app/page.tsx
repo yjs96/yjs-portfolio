@@ -15,7 +15,7 @@ export default function Home() {
         <Carousel className="w-[calc(100%-200px)]">
           <CarouselContent>
             {Array.from({ length: pageNumber }, (_, index) => (
-              <CarouselItem>
+              <CarouselItem key={index}>
                 <Image
                   src={`/${index}.png`}
                   width="2880"
@@ -30,10 +30,10 @@ export default function Home() {
         </Carousel>
       </div>
       <div className="w-screen h-screen flex justify-center items-center overflow-hidden lg:hidden">
-        <Carousel className='w-full'>
+        <Carousel className="w-full">
           <CarouselContent>
             {Array.from({ length: pageNumber }, (_, index) => (
-              <CarouselItem>
+              <CarouselItem key={index}>
                 <Image
                   src={`/${index}.png`}
                   width="1920"
