@@ -29,8 +29,8 @@ export default function Home() {
           <CarouselNext />
         </Carousel>
       </div>
-      <div className="w-screen h-screen flex justify-center items-center overflow-hidden lg:hidden">
-        <Carousel className="w-full">
+      <div className="w-screen h-screen overflow-hidden lg:hidden">
+        <Carousel className="w-screen h-screen flex justify-center items-center">
           <CarouselContent>
             {Array.from({ length: pageNumber }, (_, index) => (
               <CarouselItem key={index}>
