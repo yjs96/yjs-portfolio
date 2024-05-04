@@ -6,6 +6,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export default function Home() {
   const pageNumber = 20;
@@ -47,6 +48,7 @@ export default function Home() {
           <CarouselNext />
         </Carousel>
       </div>
+      <SpeedInsights />
     </>
   );
 }
