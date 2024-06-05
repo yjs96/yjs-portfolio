@@ -8,7 +8,7 @@ import {
 } from '@/components/ui/carousel';
 
 export default function Home() {
-  const pageNumber = 20;
+  const pageNumber = 21;
   return (
     <>
       <div className="w-screen h-screen hidden justify-center items-center overflow-hidden lg:flex">
