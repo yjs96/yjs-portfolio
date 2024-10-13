@@ -158,7 +158,7 @@ export default function Home() {
             <DialogTitle>페이지 이동</DialogTitle>
             <DialogDescription>
               {openDialogIndex !== null && (
-                <p>{openDialogIndex}버튼을 클릭하면 해당 페이지로 이동해요</p>
+                <p>버튼을 클릭하면 해당 페이지로 이동해요</p>
               )}
             </DialogDescription>
           </DialogHeader>
