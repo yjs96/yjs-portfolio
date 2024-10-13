@@ -40,7 +40,7 @@ const pageButtons = [
     urls: [
       {
         name: 'URL',
-        url: 'https://rodi-fork-vercel.app/admin/home',
+        url: 'https://rodi-fork.vercel.app/admin/home',
       },
       {
         name: 'Github',
