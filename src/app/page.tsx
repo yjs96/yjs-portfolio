@@ -111,13 +111,18 @@ export default function Home() {
     if (!buttonData) return null;
 
     return buttonData.urls.map((url, i) => (
-      <Button variant={'outline'} key={i} onClick={() => window.open(url.url, '_blank')} className='relative'>
+      <Button
+        variant={'outline'}
+        key={i}
+        onClick={() => window.open(url.url, '_blank')}
+        className="relative"
+      >
         <Image
           src={`/icons/${url.name}.png`}
           width={24}
           height={24}
           alt={`${url.name} icon`}
-          className='absolute left-2'
+          className="absolute left-2"
         />
         {url.name}
       </Button>
@@ -144,6 +149,30 @@ export default function Home() {
                     alt={index.toString()}
                   />
                 </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
+      </div>
+      <div className="w-screen h-screen overflow-hidden lg:hidden">
+        <Carousel className="w-full h-full flex justify-center items-center">
+          <CarouselContent>
+            {Array.from({ length: pageNumber }, (_, index) => (
+              <CarouselItem key={index}>
+                <div
+                  onClick={() => isClickable(index) && openModal(index)}
+                  className={
+                    isClickable(index) ? 'cursor-pointer' : 'cursor-default'
+                  }
+                ></div>
+                <Image
+                  src={`/${index}.png`}
+                  width="1920"
+                  height="1080"
+                  alt={index.toString()}
+                ></Image>
               </CarouselItem>
             ))}
           </CarouselContent>
